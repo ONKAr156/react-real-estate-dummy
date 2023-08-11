@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100vw;
+    height: 30rem;
+    filter: brightness(40%);
+}

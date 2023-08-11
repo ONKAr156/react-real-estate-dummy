@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.skillhub-logo {
+    height: 45px;
+}
+.skillhub-logo-offcanvas {
+    height: 40px;
+}
+
+.off-bg {
+    background-color: #282d32;
+}
+
+.navbar-font {
+    font-size: 15px;
+}
+
+@media (max-width: 576px) {
+
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .navbar-padding {
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+}
+
+@media (min-width: 993px) {
+    .navbar-padding {
+        padding-left: 25px;
+    }
+}

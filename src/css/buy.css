@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading_buy {
+    height: 28rem;
+}
+
+.heading_buy img {
+    filter: brightness(40%);
+    
+}
+.child1{
+    height: 15rem;
+}
+.child1 .top-icons .icon {
+   border-radius: 50%;
+   padding: 2rem;
+}
+.child1 .top-icons i{
+    display: none;
+}
+.child1 img:hover + .top-icons i  {
+    display: block;
+    cursor: pointer;
+ 
+}
+.input-stat {
+    width: 20rem;
+}
+
