@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
 
     return <>
-            <nav className="navbar sticky-lg-top  bg-success-subtle    navbar-expand-md  border-bottom navbar-padding">
+            <nav className="navbar sticky-lg-top  bg-success-subtle bg-opacity-75   navbar-expand-md  border-bottom navbar-padding">
             <div className="container-fluid">
                 
                 <button className="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">

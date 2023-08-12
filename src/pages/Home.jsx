@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import "../css/home.css"
+import { motion } from "framer-motion"
 const Home = () => {
   const [showForm, setshowForm] = useState(<Buy />)
   const process = [
@@ -22,8 +23,8 @@ const Home = () => {
 
 
 
-
   return <>
+  {/* carousel */}
     <div id="carouselExampleCaptions position-relative " className="carousel slide " data-bs-ride="carousel">
       <div className="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active"></button>
@@ -51,23 +52,19 @@ const Home = () => {
       <div className="row">
         <div className="col-md-6 col-lg-12 ">
           <div className='d-flex justify-content-center gap-2 align-items-center w-100 mt-2 '>
-            <button className='text-bg-success p-3 w-25' onClick={e => setshowForm(<Buy/>)}>Buy</button>
-            <button className='text-bg-success p-3 w-25' onClick={e => setshowForm(<Sell />)}>sell</button>
-            <button className='text-bg-success p-3 w-25' onClick={e => setshowForm(<Rent />)}>rent</button>
+            <button className='text-bg-success px-3 py-1 rounded-2 ' onClick={e => setshowForm(<Buy />)}>Buy</button>
+            <button className='text-bg-success px-3 py-1 rounded-2 ' onClick={e => setshowForm(<Sell />)}>sell</button>
+            <button className='text-bg-success px-3 py-1 rounded-2 ' onClick={e => setshowForm(<Rent />)}>rent</button>
           </div>
         </div>
-        <div className="col-md-6 col-lg-12 h-25 text-bg-info-subtle rounded-2 mt-2 text-bg-dark">
-          {/* {
-            buyData == true ? buy() : false
-          }
-          {
-            sellData == false ? sell() : true
-          }
-          {
-            rentData == false ? rent() : true
-          } */}
+        <motion.div
+          initial={{ y: -250, opacity: 0 }}
+          transition={{ delay: 0.5, type: "spring", stiffness: 120 }}
+          animate={{ opacity: 0.85, y: 25 }}
+          className="col-md-6 col-lg-12 h-25 text-bg-info-subtle rounded-2 mt-2 text-bg-dark">
           {showForm}
-        </div>
+
+        </motion.div>
       </div>
       {/* text1 */}
       <div className='row mt-5'>
@@ -89,7 +86,9 @@ const Home = () => {
           process.map(item => <div className='col-md-6 col-lg-4  '>
             <div className='   d-lg-flex justify-content-lg-center justify-content-center flex-lg-column'>
               <p className='fs-4 p-2 h-25  bg-info-subtle d-flex justify-content-center align-items-center  rounded-2'>
-                <i className={`${item.icon} text-dark   `}></i>
+                <motion.i
+                  whileHover={{ scale: 1.3, }}
+                  className={`${item.icon} text-dark   `}></motion.i>
               </p>
               <p className='text-black-50 text-center'>{item.title}</p>
               <p className='text-black-50 text-center'>{item.desc}</p>
@@ -135,8 +134,8 @@ const Buy = () => {
   </select>
 
   return <>
-    <h5>buy</h5>
-    <div className=' d-flex justify-content-between align-items-center h-50  w-100'>
+    <span className='mb-5'>"Build Wealth, Buy Property"</span>
+    <div className=' d-flex justify-content-between bg-danger align-items-center h-50  w-100'>
       <div className='d-flex flex-column gap-2'>
         <span className='fs-4'>Search</span>
         <p>
@@ -181,7 +180,7 @@ const Sell = () => {
 
   return <>
     <h5>sell</h5>
-    <div className=' d-flex justify-content-between align-items-center h-50  w-100'>
+    <div className=' d-flex justify-content-between text-bg-warning align-items-center h-50  w-100'>
       <div className='d-flex flex-column gap-2'>
         <span className='fs-4'>Search</span>
         <p>

@@ -1,23 +1,14 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-
+import React from 'react'
+import {motion } from "framer-motion"
 const Test = () => {
-const [data, setData] = useState([])
-    useEffect(()=>{
-    axios.get("https://jsonplaceholder.typicode.com/posts").then((result)=>{
-        setData(result.data)
-        console.log(result.data);
-    } )
-    
-    })
     return <>
-    {
-        data && data.map(item=><ul key={item.id}>
-           <li>{item.id}</li>
-           <h2>{item.title}</h2>
-           <li>{item.userId}</li>
-        </ul>)
-    }
+    <div className="container">
+    <motion.h2 animate={{fontSize:50, color:"blue", x:100,marginTop:200  }}>
+        Lorem ipsum dolor sit amet.
+    </motion.h2>
+
+    </div>
+
     </>
 }
 
