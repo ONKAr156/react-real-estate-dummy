@@ -32,13 +32,13 @@ const Home = () => {
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div className="carousel-inner ">
-        <div className="carousel-item img-fluid  active" data-bs-interval="2000">
+        <div className="carousel-item img-fluid  active" data-bs-interval="1000" id='0'>
           <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" />
         </div>
-        <div className="carousel-item img-fluid " data-bs-interval="2000">
+        <div className="carousel-item img-fluid " data-bs-interval="1000" >
           <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1268&q=80" />
         </div>
-        <div className="carousel-item img-fluid " data-bs-interval="2000">
+        <div className="carousel-item img-fluid " data-bs-interval="1000" >
           <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" />
         </div>
       </div>
@@ -47,7 +47,7 @@ const Home = () => {
     <div className='position-absolute  top-50 start-50 translate-middle-x '>
       <h2 className='text-light'>Find your perfect property</h2>
     </div>
-    <div className="container">
+    <div className="container px-3">
       {/* buy / sell / rent  */}
       <div className="row">
         <div className="col-md-6 col-lg-12 ">
@@ -61,7 +61,7 @@ const Home = () => {
           initial={{ y: -250, opacity: 0 }}
           transition={{ delay: 0.5, type: "spring", stiffness: 120 }}
           animate={{ opacity: 0.85, y: 25 }}
-          className="col-md-6 col-lg-12 h-25 text-bg-info-subtle rounded-2 mt-2 text-bg-dark">
+          className="col-md-6 col-lg-12 h-25 border border-primary p-2 rounded-2 mt-2 ">
           {showForm}
 
         </motion.div>
@@ -114,17 +114,17 @@ const Home = () => {
 }
 
 const Buy = () => {
-  const price = ["2k-5k", '5k-10k', '10k-15k', '15k-20k', '20k-50k']
-  const categories = ["Houses", 'Apartments', 'offices', 'townhome']
+  const price = ["20-30 lakh " , '30-40 lakh ' , '40-45 lakh ' , '50-60 lakh ' , '70-100lakh ' ]
+  const categories = ["Houses", 'Apartments','Flat', 'offices',  'townhome']
   const selectCat = <select class="form-select">
-    <option selected>Open this select menu</option>
+    <option selected>Please select your preferred asset</option>
     {
       categories.map(item => <option key={item.id}>
         {item}
       </option>)
     }
   </select>
-  const selectPrice = <select class="form-select">
+  const selectPrice = <select class="form-select ">
     <option selected>Open this select menu</option>
     {
       price.map(item => <option key={item.id}>
@@ -134,43 +134,47 @@ const Buy = () => {
   </select>
 
   return <>
-    <span className='mb-5'>"Build Wealth, Buy Property"</span>
-    <div className=' d-flex justify-content-between bg-danger align-items-center h-50  w-100'>
+    <h5>buy</h5>
+    <div className=' d-md-block d-lg-flex justify-content-between  align-items-lg-center h-50  w-100'>
       <div className='d-flex flex-column gap-2'>
-        <span className='fs-4'>Search</span>
+        <span className='fs-6  '>Search</span>
         <p>
-          <input type="text" placeholder='City, Address, Zip:' />
+          <input className='px-2 ' type="text" placeholder='City, Address, Zip:' />
         </p>
       </div>
 
       <div className='d-flex flex-column gap-2'>
-        <span className='fs-4'>Categories:</span>
+        <span className='fs-6 '>Categories:</span>
         <p>{selectCat}</p>
       </div>
 
       <div className='d-flex flex-column gap-2'>
-        <span className='fs-4'>Price :</span>
-        <p>{selectPrice}</p>
+        <span className='fs-6'>Price :</span>
+        <p className='px-2 '>{selectPrice}</p>
       </div>
     </div>
-    <div>
+    <motion.p 
+    initial={{x:"100vw", opacity:0.5}}
+    animate={{x:0,  opacity:1}}
+    transition={{delay:0.8}}
+     >
       <button className='text-bg-success p-2'>Submit</button>
-    </div>
+    </motion.p>
   </>
 }
 const Sell = () => {
-  const price = ["2k-5k", '5k-10k', '10k-15k', '15k-20k', '20k-50k']
+  const price = ["20-30 lakh " , '30-40 lakh ' , '40-45 lakh ' , '50-60 lakh ' , '70-100lakh ' ]
   const categories = ["Houses", 'Apartments', 'offices', 'townhome']
   const selectCat = <select class="form-select">
-    <option selected>Open this select menu</option>
+    <option selected>Please select your property</option>
     {
       categories.map(item => <option key={item.id}>
         {item}
       </option>)
     }
   </select>
-  const selectPrice = <select class="form-select">
-    <option selected>Open this select menu</option>
+  const selectPrice = <select class="form-select ">
+    <option selected>Expected Price</option>
     {
       price.map(item => <option key={item.id}>
         {item}
@@ -180,42 +184,46 @@ const Sell = () => {
 
   return <>
     <h5>sell</h5>
-    <div className=' d-flex justify-content-between text-bg-warning align-items-center h-50  w-100'>
+    <div className=' d-md-block d-lg-flex justify-content-between  align-items-lg-center h-50  w-100'>
       <div className='d-flex flex-column gap-2'>
-        <span className='fs-4'>Search</span>
+        <span className='fs-6  '>Search</span>
         <p>
-          <input type="text" placeholder='City, Address, Zip:' />
+          <input className='px-2 ' type="text" placeholder='City, Address, Zip:' />
         </p>
       </div>
 
       <div className='d-flex flex-column gap-2'>
-        <span className='fs-4'>Categories:</span>
+        <span className='fs-6 '>Categories:</span>
         <p>{selectCat}</p>
       </div>
 
       <div className='d-flex flex-column gap-2'>
-        <span className='fs-4'>Price :</span>
-        <p>{selectPrice}</p>
+        <span className='fs-6'>Price :</span>
+        <p className='px-2 '>{selectPrice}</p>
       </div>
     </div>
-    <div>
+    <motion.div
+    initial={{x:"100vw", opacity:0.5}}
+    animate={{x:0,  opacity:1}}
+    transition={{delay:0.8}}
+    >
       <button className='text-bg-success p-2'>Submit</button>
-    </div>
+    </motion.div>
   </>
 }
 const Rent = () => {
   const price = ["2k-5k", '5k-10k', '10k-15k', '15k-20k', '20k-50k']
   const categories = ["Houses", 'Apartments', 'offices', 'townhome']
   const selectCat = <select class="form-select">
-    <option selected>Open this select menu</option>
+    <option selected>Open Rent options</option>
     {
       categories.map(item => <option key={item.id}>
         {item}
       </option>)
     }
   </select>
-  const selectPrice = <select class="form-select">
-    <option selected>Open this select menu</option>
+  const selectPrice = <select class="form-select ">
+    <option selected>Expected Rent price</option>
     {
       price.map(item => <option key={item.id}>
         {item}
@@ -225,29 +233,34 @@ const Rent = () => {
 
   return <>
     <h5>rent</h5>
-    <div className=' d-flex justify-content-between align-items-center h-50  w-100'>
+    <div className=' d-md-block d-lg-flex justify-content-between p-2  align-items-lg-center h-50  w-100'>
       <div className='d-flex flex-column gap-2'>
-        <span className='fs-4'>Search</span>
+        <span className='fs-6  '>Search</span>
         <p>
-          <input type="text" placeholder='City, Address, Zip:' />
+          <input className='px-2 ' type="text" placeholder='City, Address, Zip:' />
         </p>
       </div>
 
       <div className='d-flex flex-column gap-2'>
-        <span className='fs-4'>Categories:</span>
+        <span className='fs-6 '>Categories:</span>
         <p>{selectCat}</p>
       </div>
 
       <div className='d-flex flex-column gap-2'>
-        <span className='fs-4'>Price :</span>
-        <p>{selectPrice}</p>
+        <span className='fs-6'>Price :</span>
+        <p className='px-2 '>{selectPrice}</p>
       </div>
     </div>
-    <div>
+    <motion.div 
+    initial={{x:"100vw", opacity:0.5}}
+    animate={{x:0,  opacity:1}}
+    transition={{delay:0.8}}
+    >
       <button className='text-bg-success p-2'>Submit</button>
-    </div>
+    </motion.div>
   </>
 }
+
 
 
 export default Home

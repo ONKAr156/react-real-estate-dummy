@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
 
     return <>
-            <nav className="navbar sticky-lg-top  bg-success-subtle bg-opacity-75   navbar-expand-md  border-bottom navbar-padding">
+            <nav className="navbar sticky-lg-top  text-bg-light  bg-opacity-75   navbar-expand-md  border-bottom navbar-padding">
             <div className="container-fluid">
                 
                 <button className="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -34,46 +34,41 @@ const Navbar = () => {
                 <div>
                     <ul className="navbar-nav justify-content-center flex-grow-1">
                         <li className="nav-item">
-                            <Link to={"/buy"} className="nav-link fs-5 active" aria-current="page" >
+                            <Link to={"/buy"} className="nav-link fw-semibold fs-6 active" aria-current="page" >
                                 <i className="bi bi-house-add d-md-none"></i>
                                 <span className="ms-2">Buy</span>
                             </Link>
                         </li>
                         <li className="nav-item">
-                        <Link to={"/sell"} className="nav-link fs-5" >
+                        <Link to={"/sell"} className="nav-link fw-semibold fs-6" >
                                 <i className="bi bi-houses d-md-none"></i>
-                                <span className="ms-2">Sell</span>
+                                <span className="ms-2 fw-semibold">Sell</span>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link fs-5" href="#">
+                            <Link to={"/about"} className="nav-link fw-semibold fs-6" >
                                 <i className="bi bi-buildings d-md-none"></i>
                                 <span className="ms-2">About</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link fs-5" href="#">
+                            <Link to={"/contact"} className="nav-link fw-semibold fs-6" >
                                 <i className="bi bi-person-lines-fill d-md-none"></i>
                                 <span className="ms-2">Contact us</span>
-                            </a>
+                            </Link>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link fs-5" href="#">
-                                <i className="bi bi-layout-text-sidebar d-md-none"></i>
-                                <span className="ms-2">Services</span>
-                            </a>
-                        </li>
+                        
 
                         <hr className="my-0" />
                         
                         <li className="nav-item d-md-none">
-                            <a className="nav-link fs-5" aria-current="page" href="#">
+                            <a className="nav-link fs-5" aria-current="page" >
                                 <i className="bi bi-person-circle"></i>
                                 <span className="ms-2">Profile</span>
                             </a>
                         </li>
                         <li className="nav-item d-md-none">
-                            <a className="nav-link fs-5" aria-current="page" href="#">
+                            <a className="nav-link fs-5 " aria-current="page" >
                                 <i className="bi bi-gear"></i>
                                 <span className="ms-2">Settings</span>
                             </a>
