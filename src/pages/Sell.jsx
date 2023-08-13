@@ -1,6 +1,7 @@
 import React from 'react'
 import "../css//sell.css"
 import {motion} from "framer-motion"
+import sell1 from "../images/sell1.png"
 const Sell = () => {
   const process = [
     {
@@ -22,7 +23,7 @@ const Sell = () => {
   return <>
     <div className='heading_sell position-relative' >
       <img className='w-100 h-100 img-fluid object-fit-cover rounded-bottom-3  '
-        src="https://images.unsplash.com/photo-1558036117-15d82a90b9b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="" />
+        src={sell1} alt="" />
       <span className='position-absolute top-50 start-50 text-light fs-2'>Sell Faster. Save Thousands.</span>
     </div>
     <div className="container  ">

@@ -1,6 +1,8 @@
 import React from 'react'
 import "../css/contact.css"
 import {motion} from "framer-motion"
+import contact1 from "../images/contact1.png"
+import contact2 from "../images/contact2.png"
 const Contact = () => {
   const process = [
     {
@@ -22,7 +24,7 @@ const Contact = () => {
   ]
   return <>
     <div className='backImg '>
-      <img className='object-fit-cover w-100 h-100 ' src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="" />
+      <img className='object-fit-cover w-100 h-100 ' src={contact1} alt="" />
     </div>
     <div className="container my-2">
     {/* <div className="row mt-5">
@@ -42,7 +44,7 @@ const Contact = () => {
       </div> */}
       <div className="row mt-0">
         <div className="col-md-6 col-lg-4">
-          <img className='img-fluid w-100 h-100' src="https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=410&q=80" alt="" />
+          <img className='img-fluid w-100 h-100' src={contact2} alt="" />
         </div>
         <div className=" col-md-6 col-lg-8 justify-content-center align-item-center d-flex flex-column gap-2">
           <h3  className='fs-2 w-100'>Connecting Dreams to Addresses</h3>

@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import "../css/home.css"
 import { motion } from "framer-motion"
+import car1 from "../images/car1.png"
+import car2 from "../images/car2.png"
+import car3 from "../images/car3.png"
 const Home = () => {
   const [showForm, setshowForm] = useState(<Buy />)
   const process = [
@@ -33,13 +36,13 @@ const Home = () => {
       </div>
       <div className="carousel-inner ">
         <div className="carousel-item img-fluid  active" data-bs-interval="1000" id='0'>
-          <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" />
+          <img src={car1} />
         </div>
         <div className="carousel-item img-fluid " data-bs-interval="1000" >
-          <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1268&q=80" />
+          <img src={car2} />
         </div>
         <div className="carousel-item img-fluid " data-bs-interval="1000" >
-          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" />
+          <img src={car3} />
         </div>
       </div>
     </div>
