@@ -1,5 +1,5 @@
 import React from 'react'
-// import logo from "../assets/house1.png"
+import logo from "../animation/1.png"
 import "../css/navbar.css"
 import { Link } from 'react-router-dom'
 
@@ -14,15 +14,15 @@ const Navbar = () => {
                 </button>
                 
                 <div className="d-flex mx-auto gap-2">
-                    {/* <img src={logo} alt="" className="skillhub-logo img-fluid" /> */}
-                    <Link to={"/"} className="navbar-brand fs-4" >LandMark</Link>
+                    <img src={logo} alt="" className="skillhub-logo img-fluid rounded-circle" />
+                    <Link to={"/"} className="navbar-brand fs-4 title" >LandMark</Link>
                 </div>
 
             <div className="offcanvas offcanvas-start w-75" id="offcanvasNavbar">
                 <div className="offcanvas-header off-bg">
                     <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
                         <div className="d-flex align-items-center gap-2">
-                            {/* <img src={logo} alt="" className="skillhub-logo-offcanvas img-fluid"/> */}
+                            <img src={logo} alt="" className="skillhub-logo-offcanvas img-fluid"/>
                             <Link to={"/"} className="navbar-brand fs-3 text-light" >LandMark</Link>
                         </div>
                     </h5>

@@ -1,6 +1,6 @@
 import React from 'react'
-import Footer from './Footer'
 import "../css//sell.css"
+import {motion} from "framer-motion"
 const Sell = () => {
   const process = [
     {
@@ -21,7 +21,7 @@ const Sell = () => {
   ]
   return <>
     <div className='heading_sell position-relative' >
-      <img className='w-100 h-100 img-fluid object-fit-cover rounded-bottom-5  '
+      <img className='w-100 h-100 img-fluid object-fit-cover rounded-bottom-3  '
         src="https://images.unsplash.com/photo-1558036117-15d82a90b9b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="" />
       <span className='position-absolute top-50 start-50 text-light fs-2'>Sell Faster. Save Thousands.</span>
     </div>
@@ -33,19 +33,20 @@ const Sell = () => {
 
         </div>
       </div>
-      <div className="row">
+      <div className="row mt-5">
         {
           process.map(item => <div className='col-md-6 col-lg-4  '>
-            <div className='   d-lg-flex justify-content-lg-center flex-lg-column'>
-              <p className='fs-4 p-2 w-25 bg-info-subtle d-flex justify-content-center align-items-center  rounded-2'>
-                <i className={`${item.icon} text-dark   `}></i>
+            <div className='   d-lg-flex justify-content-lg-center justify-content-center flex-lg-column'>
+              <p className='fs-4 p-2 h-25   bg-info-subtle d-flex justify-content-center align-items-center  rounded-2'>
+                <motion.i
+                  whileHover={{ scale: 1.3, }}
+                  className={`${item.icon} text-dark   `}></motion.i>
               </p>
-              <p className='text-black-50'>{item.title}</p>
-              <p className='text-black-50'>{item.desc}</p>
+              <p className='text-black text-center'>{item.title}</p>
+              <p className='text-black-50 text-center'>{item.desc}</p>
             </div>
           </div>)
         }
-
       </div>
       <div className="row">
         <div className="col-sm-6 offset-sm-3 work text-center d-flex justify-content-center flex-column">
@@ -69,7 +70,7 @@ const Sell = () => {
               <span className='fw-semibold'>Brokerage Fee</span>
             </div>
 
-            <div className='d-md-flex d-sm-inline-block justify-content-between '>
+            <div className='d-md-flex    justify-content-between '>
               <span className='text-success fs-4 fw-semibold'>$29792</span>
               <span className='text-success fs-4 fw-semibold'>$297.92</span>
             </div>

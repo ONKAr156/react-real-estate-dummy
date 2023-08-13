@@ -1,5 +1,6 @@
 import React from 'react'
 import "../css/buy.css"
+import img2 from "../images/car3.jpg"
 const Buy = () => {
   /* 
    All the data is converted into a single Array for code Optimization 
@@ -30,7 +31,7 @@ const Buy = () => {
       sq: 500,
       rating: 3.9,
       bed: 1,
-      img: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2075&q=80"
+      img:img2
     },
     {
       address: "5133 MCLAIN WAY, Baton Rouge, LA 70809, USA",

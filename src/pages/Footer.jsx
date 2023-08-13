@@ -1,5 +1,6 @@
 import React from 'react'
 import "../css//footer.css"
+import logo from "../animation/1.png"
 const Footer = () => {
     return <>
         <div className="footer-dark">
@@ -23,7 +24,10 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="col-md-6 item text">
+                            <div className='d-flex align-items-center  '>
                             <h3>Landmark Properties</h3>
+                                <img className='img-fluid ' height={40} width={40} src={logo} alt="" />
+                            </div>
                             <p>Find your ideal property: Buy or rent hassle-free. Discover a range of options. Your dream space is a click away. Start your property journey today!</p>
                         </div>
                         <div className="col item social d-flex gap-2">

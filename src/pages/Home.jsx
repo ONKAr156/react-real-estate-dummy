@@ -61,11 +61,14 @@ const Home = () => {
           initial={{ y: -250, opacity: 0 }}
           transition={{ delay: 0.5, type: "spring", stiffness: 120 }}
           animate={{ opacity: 0.85, y: 25 }}
-          className="col-md-6 col-lg-12 h-25 border border-primary p-2 rounded-2 mt-2 ">
+          className="col-md-6 col-lg-12 h-25   p-2 rounded-2 mt-2 ">
+            <hr />
           {showForm}
+          <hr />
 
         </motion.div>
       </div>
+      <br />
       {/* text1 */}
       <div className='row mt-5'>
         <div className="col-md-6 col-lg-12 d-flex flex-column justify-content-center align-items-center h-50">
@@ -135,7 +138,7 @@ const Buy = () => {
 
   return <>
     <h5>buy</h5>
-    <div className=' d-md-block d-lg-flex justify-content-between  align-items-lg-center h-50  w-100'>
+    <div className=' d-md-block d-lg-flex justify-content-center gap-3  align-items-lg-center h-50  w-100'>
       <div className='d-flex flex-column gap-2'>
         <span className='fs-6  '>Search</span>
         <p>
@@ -158,7 +161,10 @@ const Buy = () => {
     animate={{x:0,  opacity:1}}
     transition={{delay:0.8}}
      >
+      <p className='text-end'>
+
       <button className='text-bg-success p-2'>Submit</button>
+      </p>
     </motion.p>
   </>
 }
@@ -184,7 +190,7 @@ const Sell = () => {
 
   return <>
     <h5>sell</h5>
-    <div className=' d-md-block d-lg-flex justify-content-between  align-items-lg-center h-50  w-100'>
+    <div className=' d-md-block d-lg-flex justify-content-center  gap-3 align-items-lg-center h-50  w-100'>
       <div className='d-flex flex-column gap-2'>
         <span className='fs-6  '>Search</span>
         <p>
@@ -207,7 +213,10 @@ const Sell = () => {
     animate={{x:0,  opacity:1}}
     transition={{delay:0.8}}
     >
+      <p className='text-end'>
       <button className='text-bg-success p-2'>Submit</button>
+
+      </p>
     </motion.div>
   </>
 }
@@ -233,7 +242,7 @@ const Rent = () => {
 
   return <>
     <h5>rent</h5>
-    <div className=' d-md-block d-lg-flex justify-content-between p-2  align-items-lg-center h-50  w-100'>
+    <div className=' d-md-block d-lg-flex justify-content-center gap-3 p-2  align-items-lg-center h-50  w-100'>
       <div className='d-flex flex-column gap-2'>
         <span className='fs-6  '>Search</span>
         <p>
@@ -256,7 +265,10 @@ const Rent = () => {
     animate={{x:0,  opacity:1}}
     transition={{delay:0.8}}
     >
+      <p className='text-end'>
+
       <button className='text-bg-success p-2'>Submit</button>
+      </p>
     </motion.div>
   </>
 }
