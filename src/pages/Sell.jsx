@@ -29,30 +29,30 @@ const Sell = () => {
     <div className="container  ">
       <div className="row">
         <div className="col-sm-6 offset-sm-3 work text-center d-flex justify-content-center flex-column">
-          <h2>How It Works</h2>
-          <p>start working with <span className='fw-semibold text-danger'>Landmark Properties</span> that can provide everything you need to generate Lorem, ipsum. <p>awareness, drive traffic, connect.</p></p>
+          <p className='fs-1 py-2'>How It Works</p>
+          <p className='fs-5'>start working with <span className='fw-semibold text-danger'>Landmark Properties</span> that can provide everything you need to generate  awareness, drive traffic, connect.</p>
 
         </div>
       </div>
-      <div className="row mt-5">
+      <div className="row mt-5 px-4">
         {
-          process.map(item => <div className='col-md-6 col-lg-4  '>
-            <div className='   d-lg-flex justify-content-lg-center justify-content-center flex-lg-column'>
+          process.map(item => <div className='col-md-6 col-lg-4 py-3 '>
+            <div className='   d-lg-flex justify-content-lg-center justify-content-center flex-lg-column gap-3'>
               <p className='fs-4 p-2 h-25   bg-info-subtle d-flex justify-content-center align-items-center  rounded-2'>
                 <motion.i
                   whileHover={{ scale: 1.3, }}
                   className={`${item.icon} text-dark   `}></motion.i>
               </p>
-              <p className='text-black text-center'>{item.title}</p>
-              <p className='text-black-50 text-center'>{item.desc}</p>
+              <p className='text-black text-center fs-5 py-2'>{item.title}</p>
+              <p className='text-black-50 text-center '>{item.desc}</p>
             </div>
           </div>)
         }
       </div>
       <div className="row">
         <div className="col-sm-6 offset-sm-3 work text-center d-flex justify-content-center flex-column">
-          <h2>Brokerage Calculator</h2>
-          <p className='text-black-50'>Start working with Landrick that can provide everything you need to generate <p>awareness, drive traffic, connect. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p></p>
+          <p className='fs-4 py-2'>Brokerage Calculator</p>
+          <p className='text-black-50 fs-6'>Start working with Landrick that can provide everything you need to generate <p>awareness, drive traffic, connect. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p></p>
 
         </div>
       </div>
@@ -72,8 +72,8 @@ const Sell = () => {
             </div>
 
             <div className='d-md-flex    justify-content-between '>
-              <span className='text-success fs-4 fw-semibold'>$29792</span>
-              <span className='text-success fs-4 fw-semibold'>$297.92</span>
+              <span className='text-success fs-4 px-2 fw-semibold'>$29792</span>
+              <span className='text-success fs-4 px-2 fw-semibold'>$297.92</span>
             </div>
 
           </div>

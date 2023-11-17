@@ -1,6 +1,6 @@
 import React from 'react'
 import "../css/contact.css"
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 import contact1 from "../images/contact1.png"
 import contact2 from "../images/contact2.png"
 const Contact = () => {
@@ -23,41 +23,36 @@ const Contact = () => {
     },
   ]
   return <>
-    <div className='backImg '>
+    <div className='backImg  '>
       <img className='object-fit-cover w-100 h-100 ' src={contact1} alt="" />
     </div>
-    <div className="container my-2">
-    {/* <div className="row mt-5">
-        {
-          process.map(item => <div className='col-md-6 col-lg-4  '>
-            <div className='   d-lg-flex justify-content-lg-center justify-content-center flex-lg-column'>
-              <p className='fs-4 p-2 h-25   bg-info-subtle d-flex justify-content-center align-items-center  rounded-2'>
-                <motion.i
-                  whileHover={{ scale: 1.3, }}
-                  className={`${item.icon} text-dark   `}></motion.i>
-              </p>
-              <p className='text-black text-center'>{item.title}</p>
-              <p className='text-black-50 text-center'>{item.desc}</p>
-            </div>
-          </div>)
-        }
-      </div> */}
+    <div className="container my-2 scroll-smooth">
+
       <div className="row mt-0">
-        <div className="col-md-6 col-lg-4">
+        <div className="col-md-6 col-lg-4 my-3">
           <img className='img-fluid w-100 h-100' src={contact2} alt="" />
         </div>
-        <div className=" col-md-6 col-lg-8 justify-content-center align-item-center d-flex flex-column gap-2">
-          <h3  className='fs-2 w-100'>Connecting Dreams to Addresses</h3>
+        <div className=" col-md-6 col-lg-8  justify-content-center align-item-center d-flex flex-column gap-2 my-3">
+          <h3 className='fs-2 w-100'>Connecting Dreams to Addresses</h3>
 
           <div className='d-flex flex-column gap-0 d-md-block '>
-          <span className='fs-5'> Reach out and let's make your real estate aspirations a reality. </span>
-          <p className='text-break text-black-50'> Our team awaits to assist you on your property journey. Your perfect property is just a message away.
-          <span className='text-black-50'>Contact us now for a personalized experience in finding your dream home.</span>
-          </p>
+            <span className='fs-5'> Reach out and let's make your real estate aspirations a reality. </span>
+            <p className='text-break text-black-50'> Our team awaits to assist you on your property journey. Your perfect property is just a message away.
+              <span className='text-black-50'>Contact us now for a personalized experience in finding your dream home.</span>
+            </p>
           </div>
         </div>
       </div>
-      <div className="row px-2">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.3 }}
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0 }
+        }}
+        className="row px-2 my-5">
         <div className="col-md-4 d-flex justify-content-center align-items-center flex-column  ">
           <h1 className='fs-1 text-success title   '>
             Landmark <small className='fs-6'>Property's</small>
@@ -95,7 +90,7 @@ const Contact = () => {
           </p>
 
         </div>
-      </div>
+      </motion.div>
     </div>
 
   </>

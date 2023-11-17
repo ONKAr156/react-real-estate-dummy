@@ -1,6 +1,7 @@
 import React from 'react'
 import "../css/buy.css"
 import img2 from "../images/car3.jpg"
+import { motion } from "framer-motion"
 const Buy = () => {
   /* 
    All the data is converted into a single Array for code Optimization 
@@ -31,7 +32,7 @@ const Buy = () => {
       sq: 500,
       rating: 3.9,
       bed: 1,
-      img:img2
+      img: img2
     },
     {
       address: "5133 MCLAIN WAY, Baton Rouge, LA 70809, USA",
@@ -87,14 +88,14 @@ const Buy = () => {
 
   ]
   return <>
-{/* heading background image --------------------------------------------------------------------               */}
+    {/* heading background image --------------------------------------------------------------------               */}
     <div className='heading_buy position-relative'>
       <img className='w-100 h-100   img-fluid object-fit-cover   '
         src="https://plus.unsplash.com/premium_photo-1661659232931-1d4e811b28c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="" />
       <p className='position-absolute top-50 end-50 text-light fs-2 fw-semibold'>Find Your Dream Home</p>
     </div>
-{/*  main content------------------------------------------------------------------------ */}
-    <div className="container  ">
+    {/*  main content------------------------------------------------------------------------ */}
+    <div className="container scroll-smooth  ">
       {/* search bar */}
       <div className="row mb-4">
         <div className="col-sm-12 col-md-6 offset-md-3 d-flex gap-5 flex-column">
@@ -108,15 +109,24 @@ const Buy = () => {
           </div>
         </div>
       </div>
-{/*  house map  data ------------------------------------------------------------------------ */}
-      <div className="row d-lg-flex justify-content-lg-center ">
+      {/*  house map  data ------------------------------------------------------------------------ */}
+      <div className="row d-lg-flex justify-content-lg-center px-sm-5">
         {
-          data && data.map(item => <div className='col-md-6 col-lg-4 my-3' key={item.address}>
+          data && data.map(item => <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.3 }}
+            variants={{
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0 }
+            }}
+            className='col-md-6 col-lg-4 my-3' key={item.address}>
             <div class="parent d-flex flex-column rounded-4 border border-dark justify-content-center align-content-center">
               <div class="child1 position-relative  ">
                 {/* img  */}
                 <img className='img-fluid w-100 rounded-4 h-100 object-fit-cover    ' src={item.img} alt={item.img} />
-                <div className='top-icons rounded-3 pe-auto p-2 d-flex justify-content-center align-items-center   w-25 position-absolute top-0 end-0  gap-1   p-2'>
+                <div className='top-icons rounded-3 pe-auto  d-flex justify-content-center align-items-center   w-25 position-absolute top-0 end-0  gap-1   p-2'>
                   <i className='rounded-pill   text-light bi-house'></i>
                   <i className='rounded-pill  text-light bi-heart'></i>
                   <i className='rounded-pill  text-light bi-camera '></i>
@@ -154,7 +164,7 @@ const Buy = () => {
                 </div>
               </div>
             </div>
-          </div>)
+          </motion.div>)
         }
 
       </div>
